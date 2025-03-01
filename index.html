@@ -13,33 +13,29 @@
             color: #333;
         }
         header {
-            background: white url('Roland Achia.png') no-repeat center top; /* Professional navy blue overlay */
-            background-size: 30%; /* Adjust size of the image */
+            background: white url('Roland Achia.png') no-repeat center top;
+            background-size: 30%;
             background-repeat: no-repeat;
             background-position: center top;
             height: 80vh;
-            color: #007BFF; /* Change text color to blue */
+            color: #007BFF;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Keep content towards the top */
+            justify-content: flex-end;
             align-items: center;
             text-align: center;
-            padding: 0 20px 50px 20px; /* Remove top padding to avoid too much space */
-            border-radius: 50%; /* Makes the image round */
-            overflow: hidden; /* Ensures the image fits within the round container */
+            padding-bottom: 50px;
         }
         header h1 {
             font-size: 40px;
             margin-bottom: 10px;
-            padding-top: 30px; /* Reduced padding to bring text slightly up */
         }
         header p {
             font-size: 18px;
             max-width: 80%;
-            padding-top: 10px; /* Adjust padding to make sure the text doesn't sit too close to the heading */
         }
         section {
-            padding: 50px;
+            padding: 30px;
             text-align: center;
         }
         .projects, .services {
@@ -47,23 +43,25 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        .projects .card {
-            background: #28a745;
+        .projects a, .services .card {
+            text-decoration: none;
             color: white;
+            display: block;
             margin: 20px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .projects a {
+            background: #28a745;
+        }
+        .projects a:hover {
+            transform: scale(1.05);
         }
         .services .card {
             background: #17a2b8;
-            color: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
         }
         .contact a {
             text-decoration: none;
@@ -89,14 +87,18 @@
     <section>
         <h2>Projects</h2>
         <div class="projects">
-            <div class="card">
-                <h3>Unveiling Hidden Trends in Solar Power Generation</h3>
-                <p>A data-driven analysis of temporal variability and predictive insights.</p>
-            </div>
-            <div class="card">
-                <h3>Analyzing the Impact of Weather on Solar Power Production</h3>
-                <p>Focus on wind speed and its influence on energy generation.</p>
-            </div>
+            <a href="https://github.com/ROLAND-ACHIA/my-personal-portfolio/blob/main/Impacts_on_solar_power_production.ipynb" target="_blank">
+                <div>
+                    <h3>Analyzing the Impact of Weather on Solar Power Production</h3>
+                    <p>Focus on wind speed and its influence on energy generation.</p>
+                </div>
+            </a>
+            <a href="https://github.com/ROLAND-ACHIA/my-personal-portfolio/blob/main/Unveiling%20Hidden%20Trends%20in%20Solar%20Power%20Generation..ipynb" target="_blank">
+                <div>
+                    <h3>Unveiling Hidden Trends in Solar Power Generation</h3>
+                    <p>A data-driven analysis of temporal variability and predictive insights.</p>
+                </div>
+            </a>
         </div>
     </section>
 
